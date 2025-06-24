@@ -173,10 +173,10 @@ unrar x archive.rar  (to extract .rar)
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # Grep filtering commands
-grep -oP '(?<=^| )([0-9]{1,3}\.){3}[0-9]{1,3}(?= |$)'| sort | uniq  (filter ipaddress)
-grep -Ev '^\s*https?://|.{41,}|^\s*$' | grep -E '[a-z0-9!@#$%^&*()-_=+{};:,.<>?]{5,}:[a-z0-9!@#$%^&*()-_=+{};:,.<>?]{5,}' | grep -v -e 'http://' -e 'https://' (filter credentails)
-grep -ril 'username' /var/www/html (will show the files contains username)
-find /var/www/html -type f -name "*.php" -exec grep -l 'username' {} + | xargs grep -l 'password'
+# grep -oP '(?<=^| )([0-9]{1,3}\.){3}[0-9]{1,3}(?= |$)'| sort | uniq  (filter ipaddress)
+# grep -Ev '^\s*https?://|.{41,}|^\s*$' | grep -E '[a-z0-9!@#$%^&*()-_=+{};:,.<>?]{5,}:[a-z0-9!@#$%^&*()-_=+{};:,.<>?]{5,}' | grep -v -e 'http://' -e 'https://' (filter credentails)
+# grep -ril 'username' /var/www/html (will show the files contains username)
+# find /var/www/html -type f -name "*.php" -exec grep -l 'username' {} + | xargs grep -l 'password'
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # John The Ripper (basic Format)
@@ -241,7 +241,7 @@ ssh: Filters SSH traffic.
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 # Address Filters:
-ip.addr == x.x.x.x: Filters traffic for a specific IP address.
+ip.addr == x.x.x.x: Filters traffic for a specific IP address
 ip.src == x.x.x.x: Filters traffic with a specific source IP address.
 ip.dst == x.x.x.x: Filters traffic with a specific destination IP address.
 eth.addr == xx:xx:xx:xx:xx:xx: Filters traffic based on MAC address.
